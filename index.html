@@ -6,65 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="codigo.js"></script>
-    <script>
 
-        function sumarNumeros(num1,num2){
-
-            let num3 = num1+num2;
-            console.log(num3);
-        }
-        const otroValor = 100; // const sirve para crear constantes 
-        
-        //formas de crear variables 
-        let miNumero = 90;
-        var usandoVar = 200;
-        sinUsarNada = "";
-        let coche1 ={
-            color:"rojo",
-            placas:"XVN-100-1"
-
-        };
-
-        let coche2 ={
-            color:"azul",
-            placas:"XVN-100-2"
-
-        };
-
-        let coche3 ={
-            color:"verde",
-            placas:"XVN-100-3"
-
-        };
-        coches = [coche1,coche2,coche3];
-        arreglo = ["manzana","platano","sandia"];
-
-        //esto es un for normal 
-        for (let i = 0; i < arreglo.length; i++) {
-            console.log(arreglo[i]);
-            
-        }
-        for (let i = 0; i < coches.length; i++) {
-            console.log(coches[i]);
-        }
-        //este es un map con mas de una linea de instrucción, asi coqueto 
-        coches.map(()=>{});
-        coches.map((item) => {
-            console.log("entre al item");
-            console.log(item);
-            console.log("fin de este item");
-        });
-        //este es un map de una sola linea 
-        arreglo.map(item => console.log(item));
-
-        //sumarNumeros(1,10);
-
-        
-
-        
-    </script>
 </head>
 <body>
-    <p>hola!</p>
+    <div>
+        <div>
+            <h1 style="color: blue;" id="titulo" class="titulos">Mi titulo</h1>
+        </div>
+            <h2>mi subtitulo</h2>
+    </div>
+    <div>
+        <p> este es un parrafo normal</p>
+    </div>
 </body>
 </html>
