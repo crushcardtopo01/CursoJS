@@ -12,9 +12,70 @@ function sumarNumero(numero1,numero2){
 
 function modificarTitulo(){
     
-   
-    console.log("aqui va imprimir el elemento")
+    let tr = document.getElementById("titulo").innerHTML;
+
+   document.getElementById("titulo").innerHTML +=  " Un nuevo titulo"  ;
+
+   document.getElementById("miDiv").innerHTML += `<h1 id="miTitulo"> este es  un nuevo h1 </h1>`;
+
+}
+
+function imprimirFrutas(){
+
+    let  arregloDefrutas = ["Manzana","Pera","Sandía","Guayaba","Mango", "Naranja","Melón"];
+
+    arregloDefrutas.map((fruta)=>{
+       
+        document.getElementById("contedorFrutas").innerHTML += `<li>${fruta}</li>`;
+        
+    });
+}
+function imprimirCoches(){
+
+    let listaDeCoches = [
+                        {
+                            marca:"Ford",
+                            color:"rojo",
+                            modelo:"Fiesta",
+                            Placas:"XVN2467",
+                            anio:"2020"
+                        },
+                        {
+                            marca:"Volkswagen",
+                            color:"blanco",
+                            modelo:"Polo",
+                            Placas:"XVN2487",
+                            anio:"2023"
+                        },
+                        {
+                            marca:"Toyota",
+                            color:"negro",
+                            modelo:"Corolla",
+                            Placas:"XVN--123",
+                            anio:"2019"
+                        },
+                        {
+                            marca:"Ford",
+                            color:"rojo",
+                            modelo:"Focus",
+                            Placas:"123-abc",
+                            anio:"2018"
+                        },];
     
+    listaDeCoches.map((coche)=>{
+
+        document.getElementById("contenedorCoches").innerHTML += `<li>
+        <div style = "border-style: solid; border-radius: 3px;">
+            <p>Marca:  ${coche.marca}</p>
+            <p>Color: ${coche.color}</p>
+            <p>Modelo:  ${coche.modelo}</p>
+            <p>Placas: ${coche.Placas}</p>
+            <p>Año: ${coche.anio}</p>
+        </div>
+        </li>`;
+
+    });
+
 }
 
 let variableComoFuncion = (parametro1,parametro2) => {
@@ -35,10 +96,10 @@ arreglo = [10,20,0,40,15,60,11,12,34,56,7,89,90,56];
 arreglo.map((valorActual)=> {
     //todo lo que va a hacer
 
-    if(valorActual%2 == 0)
-        console.log("es par --");
-    else
-        console.log("es impar--");
+    // if(valorActual%2 == 0)
+    //     console.log("es par --");
+    // else
+    //     console.log("es impar--");
     
 
 } );
@@ -46,12 +107,30 @@ arreglo.map((valorActual)=> {
 arreglo.map((item)=>{
 
   //  condicion logica ? esto hago si es True : esto hago si es False ; 
-    item % 2 == 0 ? console.log("es par") : console.log("no es par");
+    //item % 2 == 0 ? console.log("es par") : console.log("no es par");
 
 });
 
-console.log(document.getElementById('titulo').innerHTML);
-modificarTitulo();
+// hacer un arreglo de objetos que
 
+
+//modificarTitulo();
+// var requestOptions = {
+//     method: 'GET'
+//   };
+  
+
+// fetch("https://rickandmortyapi.com/api/character", requestOptions)
+//   .then(response => response.text())
+//   .then((result) => {
+//       datos =  JSON.parse(result);
+//       datos.results.map((item) => {
+//           console.log(item.name);
+//       });
+  
+//   })
+//   .catch(error => console.log('error', error));
+imprimirFrutas();
+imprimirCoches();
 
 
