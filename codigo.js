@@ -78,6 +78,50 @@ function imprimirCoches(){
 
 }
 
+// var requestOptions = {
+//     method: 'GET'
+//   };
+  
+
+// fetch("https://rickandmortyapi.com/api/character", requestOptions)
+//   .then(response => response.text())
+//   .then((result) => {
+//       datos =  JSON.parse(result);
+//       datos.results.map((item) => {
+//           console.log(item.name);
+//       });
+  
+//   })
+//   .catch(error => console.log('error', error));
+
+function llamarAPI(){
+
+    var requestOption ={
+        method: 'GET'
+    };
+
+    fetch("https://rickandmortyapi.com/api/character",requestOption)
+    .then(response => response.text())
+    .then((result)=>{
+        let info = JSON.parse(result);
+        
+        console.log(info);
+
+        info.results.map((objecto)=>{
+            document.getElementById("contendorPersonajes").innerHTML += `
+            <li> nombre: ${objecto.name} status:${objecto.status} Especie: ${objecto.species} </li>
+            
+            
+            ` 
+            //console.log(objecto.name);
+        });
+        
+
+    })
+    .catch(error=> console.log(error));
+
+}
+
 let variableComoFuncion = (parametro1,parametro2) => {
 
     console.log("Hola desde la arrow function !! ✌️");
@@ -115,22 +159,9 @@ arreglo.map((item)=>{
 
 
 //modificarTitulo();
-// var requestOptions = {
-//     method: 'GET'
-//   };
-  
 
-// fetch("https://rickandmortyapi.com/api/character", requestOptions)
-//   .then(response => response.text())
-//   .then((result) => {
-//       datos =  JSON.parse(result);
-//       datos.results.map((item) => {
-//           console.log(item.name);
-//       });
-  
-//   })
-//   .catch(error => console.log('error', error));
-imprimirFrutas();
-imprimirCoches();
+// imprimirFrutas();
+// imprimirCoches();
 
+llamarAPI();
 
